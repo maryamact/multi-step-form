@@ -3,7 +3,7 @@ import { ReactElement, useState } from "react";
 
 
 export default function useMultistepForm(steps : ReactElement[]) {
-const [ currentStepIndex, setcurrentStepIndex] = useState(1)
+const [ currentStepIndex, setcurrentStepIndex] = useState(0)
 function next() {
     setcurrentStepIndex( currIndex => {
         if (currIndex >= steps.length - 1) {
